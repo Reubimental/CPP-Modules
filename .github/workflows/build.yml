@@ -1,0 +1,139 @@
+name: Build C++ 98 Projects
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  cpp00:
+    name: CPP 00
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 00"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp01:
+    name: CPP 01
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 01"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp02:
+    name: CPP 02
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 02"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp03:
+    name: CPP 03
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 03"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp04:
+    name: CPP 04
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 04"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp05:
+    name: CPP 05
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 05"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp06:
+    name: CPP 06
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 06"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp07:
+    name: CPP 07
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 07"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp08:
+    name: CPP 08
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 08"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+  cpp09:
+    name: CPP 09
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exercises
+        run: |
+          for ex in "CPP 09"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
