@@ -1,0 +1,111 @@
+name: Build C++ 98 Projects
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential g++
+
+      - name: Build CPP 00
+        run: |
+          for ex in "CPP 00"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 01
+        run: |
+          for ex in "CPP 01"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 02
+        run: |
+          for ex in "CPP 02"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 03
+        run: |
+          for ex in "CPP 03"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 04
+        run: |
+          for ex in "CPP 04"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 05
+        run: |
+          for ex in "CPP 05"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 06
+        run: |
+          for ex in "CPP 06"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 07
+        run: |
+          for ex in "CPP 07"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 08
+        run: |
+          for ex in "CPP 08"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Build CPP 09
+        run: |
+          for ex in "CPP 09"/ex*/; do
+            echo "::group::Building $ex"
+            make -C "$ex"
+            echo "::endgroup::"
+          done
+
+      - name: Clean all builds
+        run: |
+          for module in "CPP 0"*/; do
+            for ex in "$module"ex*/; do
+              if [ -f "$ex/Makefile" ]; then
+                make -C "$ex" fclean 2>/dev/null || true
+              fi
+            done
+          done
+
